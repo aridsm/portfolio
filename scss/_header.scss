@@ -1,0 +1,44 @@
+header {
+  position: fixed;
+  height: calc(100vh - 20px);
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 300;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  background: linear-gradient(
+    180deg,
+    rgba(171, 153, 255, 0.02) 0%,
+    rgba(171, 153, 255, 0.12) 50%,
+    rgba(171, 153, 255, 0.02) 100%
+  );
+  border: 1px solid transparent;
+  border-image: linear-gradient(
+    20deg,
+    rgba(171, 153, 255, 0.02) 0%,
+    rgba(171, 153, 255, 0.7) 50%,
+    rgba(171, 153, 255, 0.02) 100%
+  );
+  border-image-slice: 1;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15), 0px 0px 50px rgba(18, 2, 63, 0.2);
+
+  i {
+    font-size: 30px;
+  }
+
+  a {
+    display: block;
+    padding: 15px;
+    transition: $transition;
+    &:hover {
+      color: $rosa-claro;
+      text-shadow: 0px 0px 30px rgba(252, 171, 220, 0.35);
+    }
+  }
+
+  p {
+    margin-top: 10px;
+  }
+}

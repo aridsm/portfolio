@@ -6,11 +6,12 @@ $azul-btn-claro: #6a53d4;
 $azul-btn-escuro: #3e29a4;
 $rosa-claro: #ff93d4;
 $rosa-escuro: #e566ae;
+$transition: all 0.2s ease-out;
 
 @mixin btn($cor) {
   @if $cor == rosa {
     background: linear-gradient(180deg, $rosa-claro 0%, $rosa-escuro 100%);
-
+    color: #9d095d;
     @include shadow(
       0px 0px 20px rgba(252, 171, 220, 0.15),
       inset -1px -1px 2px #9d2469,
@@ -22,7 +23,7 @@ $rosa-escuro: #e566ae;
       $azul-btn-claro 0%,
       $azul-btn-escuro 100%
     );
-
+    color: $azul-bg-2;
     @include shadow(
       1px 1px 6px rgba(18, 4, 58, 0.5),
       inset -1px -1px 2px #2d198a,
@@ -35,8 +36,4 @@ $rosa-escuro: #e566ae;
   box-shadow: $shadow;
   -webkit-box-shadow: $shadow;
   -moz-box-shadow: $shadow;
-}
-
-body {
-  background: #2d198a;
 }

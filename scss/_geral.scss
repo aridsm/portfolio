@@ -1,3 +1,12 @@
 body {
   background: linear-gradient(100deg, $azul-bg-1 2.34%, $azul-bg-2 95.79%);
+  color: $azul-texto-claro;
+  font-family: "Ubuntu", sans-serif;
+  height: 3000px;
+  padding: 10px;
+}
+
+.container-page {
+  border: 1px solid red;
+  width: 100%;
 }
