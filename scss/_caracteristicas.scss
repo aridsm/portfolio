@@ -1,0 +1,10 @@
+.caracteristicas {
+  ul {
+    display: flex;
+    justify-content: space-between;
+    li {
+      text-align: center;
+      width: 130px;
+    }
+  }
+}

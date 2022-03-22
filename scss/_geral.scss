@@ -1,32 +1,51 @@
 body {
   background: linear-gradient(100deg, $azul-bg-1 2.34%, $azul-bg-2 95.79%);
   color: $azul-texto-claro;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Prompt", sans-serif;
+  line-height: 1.2;
   height: 3000px;
   padding: 10px;
 }
 
 .container-page {
   width: 100%;
-  padding-left: 85px;
+  padding-left: 110px;
 }
 
 .tooltip {
   position: relative;
   &_msg {
-    margin: 0;
+    background: $azul-bg-2;
+    color: $rosa-claro;
+    padding: 10px 15px;
+    @include fit-content;
+    border-radius: $radius;
+    position: absolute;
+    top: calc(100% + 5px);
+    display: none;
+    z-index: 9;
+  }
+  &_ativador:hover ~ .tooltip_msg {
+    display: block;
   }
 }
 
 .btn-rosa {
-  border-radius: 7px;
+  border-radius: $radius;
   padding: 12px 17px;
   @include btn(rosa);
   transition: $transition;
   &:hover {
-    filter: contrast(110%);
+    filter: contrast(120%);
   }
   &:active {
     filter: brightness(95%);
   }
+}
+
+.container-sections {
+  max-width: 660px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 100px 0;
 }

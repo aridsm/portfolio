@@ -7,12 +7,20 @@ $azul-btn-escuro: #3e29a4;
 $rosa-claro: #ff93d4;
 $rosa-escuro: #e566ae;
 $transition: all 0.2s ease-out;
+$radius: 7px;
+$iconeSize: 25px;
 
 @mixin text-gradient {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+}
+
+@mixin fit-content {
+  width: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
 }
 
 @mixin btn($cor) {
@@ -44,4 +52,8 @@ $transition: all 0.2s ease-out;
   box-shadow: $shadow;
   -webkit-box-shadow: $shadow;
   -moz-box-shadow: $shadow;
+}
+
+@mixin detalhes {
+  font-size: 0.875rem;
 }
