@@ -65,6 +65,7 @@
 
     .front-end {
       font-size: 1.5rem;
+      font-weight: 600;
       background: linear-gradient(100deg, $rosa-escuro -10%, $rosa-claro 50%);
       @include text-gradient;
     }

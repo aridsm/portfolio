@@ -24,6 +24,15 @@ $iconeSize: 25px;
 }
 
 @mixin btn($cor) {
+  border-radius: $radius;
+  padding: 10px 20px;
+  transition: $transition;
+  &:hover {
+    filter: contrast(120%);
+  }
+  &:active {
+    filter: brightness(95%);
+  }
   @if $cor == rosa {
     background: linear-gradient(180deg, $rosa-claro 0%, $rosa-escuro 100%);
     color: #9d095d;
@@ -56,4 +65,5 @@ $iconeSize: 25px;
 
 @mixin detalhes {
   font-size: 0.875rem;
+  color: $azul-texto-escuro;
 }

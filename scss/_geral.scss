@@ -2,9 +2,13 @@ body {
   background: linear-gradient(100deg, $azul-bg-1 2.34%, $azul-bg-2 95.79%);
   color: $azul-texto-claro;
   font-family: "Prompt", sans-serif;
-  line-height: 1.2;
-  height: 3000px;
+  line-height: 1.3;
   padding: 10px;
+}
+
+h2,
+h3 {
+  font-weight: 300;
 }
 
 .container-page {
@@ -31,16 +35,7 @@ body {
 }
 
 .btn-rosa {
-  border-radius: $radius;
-  padding: 12px 17px;
   @include btn(rosa);
-  transition: $transition;
-  &:hover {
-    filter: contrast(120%);
-  }
-  &:active {
-    filter: brightness(95%);
-  }
 }
 
 .container-sections {
