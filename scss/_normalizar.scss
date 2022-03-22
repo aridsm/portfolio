@@ -7,6 +7,7 @@
 a {
   color: inherit;
   text-decoration: none;
+  display: inline-block;
 }
 
 button {
@@ -14,6 +15,8 @@ button {
   color: inherit;
   font-weight: inherit;
   cursor: pointer;
+  background: none;
+  border: none;
 }
 
 ul {

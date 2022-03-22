@@ -1,0 +1,19 @@
+@media all and (max-width: 900px) {
+  header {
+    width: calc(100vw - 40px);
+    height: initial;
+    justify-content: center;
+    background: linear-gradient(
+      267.24deg,
+      rgba(0, 0, 0, 0) -116.52%,
+      rgba(123, 107, 197, 0.2) 49.94%,
+      rgba(0, 0, 0, 0) 236.99%
+    );
+    ul {
+      display: flex;
+    }
+    a {
+      padding: 13px 15px;
+    }
+  }
+}

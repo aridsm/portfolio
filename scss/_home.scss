@@ -1,0 +1,90 @@
+.home {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 20px;
+  height: calc(100vh - 20px);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  position: relative;
+  &--header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    color: $azul-texto-escuro;
+    p:last-of-type {
+      text-align: right;
+      font-size: 0.75rem;
+    }
+    .logo {
+      font-size: 0.875rem;
+    }
+    .som {
+      display: flex;
+      align-items: center;
+      font-size: 0.75rem;
+      .toggle-som {
+        display: inline-block;
+        box-shadow: 0px 2px 4px rgba(24, 11, 62, 0.35),
+          inset -2px -2px 3px $azul-bg-1, inset 2px 2px 3px #0b0224;
+        background: rgba(29, 11, 80, 0.06);
+        border-radius: 15px;
+        width: 40px;
+        height: 22px;
+        border: 1px solid #fcabc6;
+        position: relative;
+        margin-left: 10px;
+        .circulo-toggle-som {
+          display: inline-block;
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          @include btn(rosa);
+          position: absolute;
+          top: 2px;
+          left: 2px;
+        }
+      }
+    }
+  }
+  &--principal {
+    margin: auto 0;
+    h1 {
+      font-weight: 400;
+      font-size: 3rem;
+      background: linear-gradient(
+        50deg,
+        $azul-texto-escuro 0%,
+        $azul-texto-claro 60%
+      );
+      @include text-gradient;
+    }
+    .front-end {
+      font-size: 1.5rem;
+      background: linear-gradient(100deg, $rosa-escuro -10%, $rosa-claro 50%);
+      @include text-gradient;
+    }
+    .texto {
+      color: $azul-texto-escuro;
+      margin: 10px 0 50px 0;
+    }
+    .btn-ver-projetos {
+      padding: 12px 20px;
+      color: $azul-texto-escuro;
+      transition: $transition;
+      &:hover {
+        color: $azul-texto-claro;
+      }
+    }
+  }
+  .email {
+    position: absolute;
+    color: $azul-texto-escuro;
+    top: 50%;
+    right: 0;
+    display: none;
+  }
+}
