@@ -1,0 +1,20 @@
+.valor {
+  text-align: center;
+  .preco {
+    color: $rosa-claro;
+    @include fit-content;
+    display: block;
+    margin: 0 auto;
+  }
+  .rs {
+    font-size: 1.5rem;
+    display: block;
+    text-align: left;
+  }
+  .numero {
+    font-size: 4rem;
+    span {
+      font-size: 2.25rem;
+    }
+  }
+}

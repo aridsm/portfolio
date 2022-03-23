@@ -41,7 +41,6 @@
           width: 16px;
           height: 16px;
           border-radius: 50%;
-          @include btn(rosa);
           position: absolute;
           top: 2px;
           left: 2px;
@@ -53,21 +52,15 @@
     margin: auto 0;
 
     h1 {
-      font-weight: 400;
+      font-weight: 300;
       font-size: 3rem;
-      background: linear-gradient(
-        50deg,
-        $azul-texto-escuro 0%,
-        $azul-texto-claro 60%
-      );
-      @include text-gradient;
+      color: $azul-texto-escuro;
     }
 
     .front-end {
       font-size: 1.5rem;
-      font-weight: 600;
-      background: linear-gradient(100deg, $rosa-escuro -10%, $rosa-claro 50%);
-      @include text-gradient;
+      font-weight: 300;
+      color: $rosa-claro;
     }
 
     .texto {
@@ -86,17 +79,6 @@
 
     .redes-sociais {
       margin-top: 40px;
-      i {
-        font-size: $iconeSize;
-      }
-
-      a {
-        color: $azul-texto-escuro;
-        transition: $transition;
-        &:hover {
-          color: $azul-texto-claro;
-        }
-      }
       ul {
         display: flex;
         li + li {

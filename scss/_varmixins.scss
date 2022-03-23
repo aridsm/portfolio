@@ -1,21 +1,19 @@
 $azul-bg-1: #2f1f7c;
-$azul-bg-2: #12023f;
-$azul-texto-claro: #ab99ff;
-$azul-texto-escuro: #7b6bc5;
-$azul-btn-claro: #6a53d4;
-$azul-btn-escuro: #3e29a4;
+$azul-bg-2: #0e0130;
+$azul-texto-claro: #c8bbff;
+$azul-texto-escuro: #8575ce;
+$azul-transparente: #7b6bc51a;
+$azul-borda: #4c3b9b;
 $rosa-claro: #ff93d4;
 $rosa-escuro: #e566ae;
 $transition: all 0.2s ease-out;
 $radius: 7px;
-$iconeSize: 25px;
-
-@mixin text-gradient {
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-}
+$gradient-bg: linear-gradient(
+  90deg,
+  $azul-bg-1 0%,
+  $azul-texto-escuro 50%,
+  $azul-bg-1 90%
+);
 
 @mixin fit-content {
   width: fit-content;
@@ -23,44 +21,33 @@ $iconeSize: 25px;
   width: -moz-fit-content;
 }
 
-@mixin btn($cor) {
-  border-radius: $radius;
-  padding: 10px 20px;
-  transition: $transition;
-  &:hover {
-    filter: contrast(120%);
-  }
-  &:active {
-    filter: brightness(95%);
-  }
-  @if $cor == rosa {
-    background: linear-gradient(180deg, $rosa-claro 0%, $rosa-escuro 100%);
-    color: #9d095d;
-    @include shadow(
-      0px 0px 30px rgba(252, 171, 220, 0.15),
-      1px 1px 6px rgba(18, 4, 58, 0.5),
-      inset -1px -1px 3px #9d2469,
-      inset 1px 1px 3px #ffe1eb
-    );
-  } @else if $cor == azul {
-    background: linear-gradient(
-      180deg,
-      $azul-btn-claro 0%,
-      $azul-btn-escuro 100%
-    );
-    color: $azul-bg-2;
-    @include shadow(
-      1px 1px 6px rgba(18, 4, 58, 0.5),
-      inset -1px -1px 2px #2d198a,
-      inset 1px 1px 2px #856bff
-    );
-  }
-}
-
 @mixin shadow($shadow...) {
   box-shadow: $shadow;
   -webkit-box-shadow: $shadow;
   -moz-box-shadow: $shadow;
+}
+
+@mixin gradient-border($deg, $width, $height) {
+  content: "";
+  display: block;
+  position: absolute;
+  height: $height;
+  width: $width;
+  background: linear-gradient(
+    $deg,
+    rgba(255, 255, 255, 0) 10%,
+    $azul-texto-escuro 40%,
+    rgba(255, 255, 255, 0) 90%
+  );
+}
+
+@mixin bg-gradient($deg) {
+  background: linear-gradient(
+    $deg,
+    rgba(0, 0, 0, 0) -10%,
+    $azul-transparente 50%,
+    rgba(0, 0, 0, 0) 110%
+  );
 }
 
 @mixin detalhes {

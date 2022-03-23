@@ -24,6 +24,26 @@ button {
   line-height: inherit;
 }
 
+label {
+  visibility: hidden;
+  position: absolute;
+}
+
 ul {
   list-style: none;
+}
+
+input,
+textarea {
+  display: block;
+  background: transparent;
+  width: 100%;
+  outline: none;
+  border: 0;
+  font-size: inherit;
+  font-family: inherit;
+  color: $rosa-claro;
+  &::placeholder {
+    color: $azul-texto-escuro;
+  }
 }

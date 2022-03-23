@@ -1,0 +1,56 @@
+.contato {
+  .conteudo-contato {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  form {
+    width: 100%;
+    text-align: right;
+  }
+  input,
+  textarea {
+    @include bg-gradient(90deg);
+    position: relative;
+    padding: 10px 15px;
+    border-radius: $radius;
+    &:focus {
+      outline: 1px solid $rosa-claro;
+    }
+  }
+  .input {
+    position: relative;
+    border: 1px solid $azul-bg-1;
+    margin-bottom: 20px;
+    border-radius: $radius;
+    box-shadow: 0px 0px 60px 0 rgba(0, 0, 0, 0.15);
+    transition: $transition;
+    &:hover {
+      border: 1px solid $azul-texto-escuro;
+    }
+    &::before {
+      @include gradient-border(90deg, 100%, 1px);
+      top: -1px;
+      left: 0;
+    }
+    &::after {
+      @include gradient-border(90deg, 100%, 1px);
+      bottom: -1px;
+      left: 0;
+    }
+  }
+}
+
+.contato_redes-sociais {
+  justify-self: end;
+  text-align: right;
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: $azul-texto-escuro;
+    margin-bottom: 10px;
+    i {
+      margin-left: 20px;
+    }
+  }
+}
