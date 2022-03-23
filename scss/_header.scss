@@ -12,6 +12,7 @@
   @include bg-gradient(180deg);
   transition: $transition;
   overflow: hidden;
+  z-index: 999;
   ul {
     width: 80px;
     text-align: center;
