@@ -3,7 +3,7 @@
   width: 100%;
   margin: 0 auto;
   padding-top: 20px;
-  height: calc(100vh - 20px);
+  min-height: calc(100vh - 20px);
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -60,7 +60,7 @@
   }
   &--principal {
     margin: auto 0;
-
+    padding: 70px 0;
     h1 {
       font-weight: 300;
       font-size: 3rem;
