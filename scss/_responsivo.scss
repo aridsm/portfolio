@@ -86,4 +86,88 @@
       margin-top: 20px;
     }
   }
+
+  .container-sections {
+    max-width: 340px;
+  }
+
+  .titulo_e_btns h3 {
+    text-align: center;
+    position: relative;
+    top: 0;
+    margin-bottom: 20px;
+  }
+
+  .container-sobre-mim {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    p {
+      max-width: 100%;
+      margin-left: 0;
+      margin-top: 30px;
+    }
+    picture {
+      width: 180px;
+      height: 230px;
+    }
+  }
+
+  .projeto {
+    h3 {
+      font-size: 1.5rem;
+    }
+    &_infos {
+      flex-direction: column;
+      .infos {
+        order: 2;
+        margin-top: 30px;
+      }
+    }
+    picture {
+      width: 100%;
+      margin-left: 0;
+    }
+    .linguagens {
+      flex-direction: column;
+      align-items: flex-start;
+      p {
+        margin-bottom: 15px;
+      }
+      ul {
+        width: 100%;
+      }
+      ul li {
+        flex: 1;
+        text-align: center;
+      }
+    }
+  }
+
+  .projetos_btns {
+    flex-direction: column;
+    .btns-nav {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      order: 2;
+      margin-top: 30px;
+      button {
+        flex: 1;
+      }
+    }
+    .anterior {
+      text-align: left;
+    }
+    .posterior {
+      text-align: right;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 9px;
+        left: -5px;
+      }
+    }
+  }
 }
