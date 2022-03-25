@@ -170,4 +170,27 @@
       }
     }
   }
+
+  .precos-container {
+    grid-template-columns: auto;
+  }
+  .valor .precos {
+    text-align: center;
+  }
+  .valor .a-depender {
+    text-align: center;
+    li {
+      justify-content: center;
+    }
+    &::before {
+      @include gradient-border(90deg, 100%, 1px);
+      top: -40px;
+      left: 0;
+    }
+  }
+
+  .contato .conteudo-contato {
+    grid-template-columns: auto;
+    grid-gap: 40px;
+  }
 }
