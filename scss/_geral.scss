@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(90deg, $azul-bg-1 2.34%, $azul-bg-2 95.79%);
+  background: linear-gradient(100deg, $azul-bg-1 0%, $azul-bg-2 100%);
   color: $azul-texto-escuro;
   font-family: "Red Hat Display", sans-serif;
   font-weight: 400;
@@ -21,7 +21,6 @@ i {
   position: relative;
   width: 100%;
   padding-left: 110px;
-  background: url("../egg-shell\ \(1\).png");
 }
 
 .email {
