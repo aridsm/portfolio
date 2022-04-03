@@ -2,9 +2,13 @@
   ul {
     display: flex;
     justify-content: space-between;
+    min-height: 100px;
     li {
       text-align: center;
       width: 170px;
+      &:nth-of-type(2) {
+        align-self: flex-end;
+      }
     }
   }
 }
