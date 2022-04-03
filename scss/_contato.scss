@@ -12,7 +12,7 @@
     @include bg-gradient(90deg);
     position: relative;
     padding: 10px 15px;
-    border-radius: $radius;
+    @include borderRadius;
     &:focus {
       outline: 1px solid $rosa-claro;
     }
@@ -21,9 +21,9 @@
     position: relative;
     border: 1px solid $azul-bg-1;
     margin-bottom: 20px;
-    border-radius: $radius;
-    box-shadow: 0px 0px 60px 0 rgba(0, 0, 0, 0.15);
-    transition: $transition;
+    @include borderRadius;
+    @include shadow(0px 0px 60px 0 rgba(0, 0, 0, 0.15));
+    @include transition;
     &:hover {
       border: 1px solid $azul-texto-escuro;
     }

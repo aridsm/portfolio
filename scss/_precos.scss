@@ -30,6 +30,8 @@
         width: 7px;
         height: 7px;
         border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
         display: inline-block;
         position: relative;
         border: 1px solid $rosa-claro;

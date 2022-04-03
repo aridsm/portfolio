@@ -6,15 +6,15 @@ $azul-transparente: #7b6bc51a;
 $azul-borda: #4c3b9b;
 $rosa-claro: #ff93d4;
 $rosa-escuro: #e566ae;
-
 $transition: all 0.2s ease-out;
-$radius: 7px;
-$gradient-bg: linear-gradient(
-  90deg,
-  $azul-bg-1 0%,
-  $azul-texto-escuro 50%,
-  $azul-bg-1 90%
-);
+$radius: 6px;
+
+@mixin gradient($gradient) {
+  background: -webkit-linear-gradient($gradient);
+  background: -moz-linear-gradient($gradient);
+  background: -o-linear-gradient($gradient);
+  background: linear-gradient($gradient);
+}
 
 @mixin fit-content {
   width: fit-content;
@@ -34,21 +34,34 @@ $gradient-bg: linear-gradient(
   position: absolute;
   height: $height;
   width: $width;
-  background: linear-gradient(
+  @include gradient((
     $deg,
     rgba(255, 255, 255, 0) 10%,
     $azul-texto-escuro 40%,
     rgba(255, 255, 255, 0) 90%
-  );
+  ))
 }
 
 @mixin bg-gradient($deg) {
-  background: linear-gradient(
+  @include gradient((
     $deg,
     rgba(0, 0, 0, 0) -10%,
     $azul-transparente 50%,
     rgba(0, 0, 0, 0) 110%
-  );
+  ));
+}
+
+@mixin transition {
+  transition: $transition;
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+}
+
+@mixin borderRadius {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
 }
 
 @mixin detalhes {

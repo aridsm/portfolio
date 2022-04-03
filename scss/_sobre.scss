@@ -19,11 +19,12 @@
     flex-direction: column;
 
     button {
-      border-radius: $radius;
+      @include borderRadius;
       background: $azul-transparente;
       border: 1px solid $azul-borda;
       padding: 10px 15px;
-      transition: $transition;
+      @include transition;
+
       &.selecionado {
         outline: 1px solid $rosa-claro;
         outline-offset: 2px;
@@ -43,7 +44,7 @@
   display: flex;
   margin-left: 30px;
   padding: 40px 30px;
-  border-radius: $radius;
+  @include borderRadius;
   position: relative;
   border: 1px solid $azul-bg-1;
   box-shadow: 0px 0px 60px 0 rgba(0, 0, 0, 0.15);
@@ -52,10 +53,11 @@
     width: 200px;
     height: 220px;
     display: block;
-    border-radius: $radius;
+    @include borderRadius;
     overflow: hidden;
     img {
       object-fit: cover;
+      -o-object-fit: cover;
       width: 100%;
       height: 100%;
     }

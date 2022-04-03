@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   .btns-nav button {
-    transition: $transition;
+    @include transition;
     &:hover {
       color: $azul-texto-claro;
     }
@@ -30,7 +30,7 @@
       border: 1px solid $azul-borda;
       line-height: 0.5;
       @include detalhes;
-      transition: $transition;
+      @include transition;
       & + button {
         margin-left: 3px;
       }
@@ -62,12 +62,7 @@
       font-weight: 300;
     }
     &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 100%;
-      height: 1px;
-      background: $gradient-bg;
+     @include gradient-border(90deg, 100%, 1px);
       bottom: -20px;
       left: 0;
     }

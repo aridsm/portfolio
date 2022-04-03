@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
   align-items: start;
-    justify-content: center;
+  justify-content: center;
   position: relative;
   &--header {
     display: flex;
@@ -27,10 +27,11 @@
       align-items: center;
       .toggle-som {
         display: inline-block;
-        box-shadow: 0px 2px 4px rgba(24, 11, 62, 0.35),
-          inset -2px -2px 3px $azul-bg-1, inset 2px 2px 3px #0b0224;
+        @include shadow(inset -2px -2px 3px $azul-bg-1, inset 2px 2px 3px $azul-bg-2);
         background: rgba(29, 11, 80, 0.06);
-        border-radius: 15px;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
         width: 40px;
         height: 22px;
         border: 1px solid #fcabc6;
@@ -42,13 +43,13 @@
           height: 16px;
           border-radius: 50%;
           position: absolute;
-          background: linear-gradient(
+          top: 2px;
+          left: 2px;
+          @include gradient((
             180deg,
             $rosa-claro 0%,
             $rosa-escuro 100%
-          );
-          top: 2px;
-          left: 2px;
+          ));
           @include shadow(
             0px 0px 25px rgba(252, 171, 220, 0.15),
             1px 1px 6px rgba(18, 4, 58, 0.5),
@@ -65,7 +66,7 @@
     h1 {
       font-weight: 300;
       font-size: 2.75rem;
-      color: $azul-texto-escuro;
+      color: $azul-texto-claro;
     }
 
     .front-end {
@@ -82,7 +83,7 @@
     .btn-ver-projetos {
       padding: 12px 20px;
       color: $azul-texto-escuro;
-      transition: $transition;
+      @include transition;
       &:hover {
         color: $azul-texto-claro;
       }
