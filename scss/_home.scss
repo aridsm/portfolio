@@ -27,7 +27,7 @@
       align-items: center;
       .toggle-som {
         display: inline-block;
-        @include shadow(inset -2px -2px 3px $azul-bg-1, inset 2px 2px 3px $azul-bg-2);
+       
         background: rgba(29, 11, 80, 0.06);
         border-radius: 20px;
         -webkit-border-radius: 20px;
