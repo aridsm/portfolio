@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>arimo | Portfolio</title>
+    <title>arimo | Portfólio</title>
+    <link rel="shortcut icon" href="./img/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -58,18 +59,19 @@
                     </span>
                 </button>
 
-                <p class="logo">arimo</p>
+                <p class="logo"><img src="./img/logo.svg" alt=""></p>
 
                 <p>Olá, bem vindo(a)!<br>Eu sou a<span> Ariane</span></p>
             </div>
             <div class="home--principal">
+                <div>
                 <h1>Design & <br>Desenvolvimento web</h1>
                 <p class="front-end">front-end</p>
 
                 <p class="texto">Uma frase genérica falando sobre alguma <br> coisa para deixar bonitinho.</p>
 
-                <a href="" class="btn-rosa">Entrar em contato</a>
-                <a href="" class="btn-ver-projetos">Ver projetos</a>
+                <a href="#contato" class="btn-rosa">Entrar em contato</a>
+                <a href="#projetos" class="btn-ver-projetos">Ver projetos</a>
 
                 <nav class="redes-sociais">
                     <ul>
@@ -86,7 +88,11 @@
                             <p class="tooltip_msg">Email</p>
                         </li>
                     </ul>
-                </nav>           
+                </nav>  
+                </div>
+                <div class="img-principal">
+                    <img src="./img/ilus.svg" alt="">
+                </div>        
             </div>
         </section>
         <span class="email">arianemorelato@gmail.com</span>
@@ -144,6 +150,32 @@
                                 </li>
                             </ul>
                         </div>
+                        <div class="estudando">
+                            <p>Estudando no momento</p>
+                            <ul>
+                                <li>
+                                    <img src="./img/react.svg" alt="React">
+                                    <p>React js</p>
+                                </li>
+                                <li>
+                                    <img src="./img/nodejs.svg" alt="node js">
+                                    <p>Node js</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="idiomas">
+                            <p>Idiomas</p>
+                            <ul>
+                                <li>
+                                    <p>Inglês</p>
+                                    <p class="nivel">Intermediário</p>
+                                </li>
+                                <li>
+                                    <p>Português</p>
+                                    <p class="nivel">Fluente</p>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -175,15 +207,31 @@
                         <a href="" class="tooltip_ativador"><i class="bi bi-github"></i></a>
                         <p class="tooltip_msg">Repositório Github</p>
                     </span>
-                    <h3>Nome do projeto</h3>
+                    <h3>🐟 Aquário</h3>
                 </header>
                 <div class="projeto_infos">
                     <div class="infos">
                         <p>É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação.</p>
-                        <button class="infos_mais">Mais informações<i class="bi bi-plus-lg"></i></button>
+                        <div class="mais_infos_container">
+                            <button class="infos_mais">Mais informações<i class="bi bi-plus-lg"></i></button>
+                            <ul>
+                                <li>
+                                    <p class="titulo">Responsividade</p>
+                                    <p>A partir de 300px</p>
+                                </li>
+                                <li>
+                                    <p class="titulo">Fonte(s)</p>
+                                    <p>Montserrat</p>
+                                </li>
+                                <li>
+                                    <p class="titulo">Navegabilidade</p>
+                                    <p>Não</p>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <picture>
-                        <img src="noah-silliman-gzhyKEo_cbU-unsplash.jpg" alt="">
+                        <img src="./img/aquario.gif" alt="">
                     </picture>
                 </div>
                 <div class="linguagens">
@@ -197,7 +245,7 @@
             </section>
             <div class="link-github">
                <p class="ver-todos-projetos">Veja todos os meus projetos</p>
-            <a href="" class="btn-rosa">Visitar Github</a> 
+            <a href="https://github.com/aridsm" class="btn-rosa">Visitar Github</a> 
             </div>
             
         </section>
@@ -264,7 +312,8 @@
             
         </section>
 
-        <footer><p>arimo</p><p>By <a href="">Ariane Morelato</a></p></footer>
+        <footer><img src="./img/logo.svg" alt="logo"><p class="arimo">arimo</p><p>By <a href="">Ariane Morelato</a></p></footer>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

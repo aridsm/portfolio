@@ -142,6 +142,13 @@ i {
 footer {
   padding: 100px 0 40px 0;
   text-align: center;
+  img {
+    width: 2.5rem
+  }
+  .arimo {
+    color: $rosa-claro;
+    margin-bottom: 1rem;
+  }
 }
 
 ::-webkit-scrollbar {

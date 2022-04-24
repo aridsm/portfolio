@@ -22,12 +22,17 @@
         color: $azul-texto-claro;
       }
     }
+    .logo img {
+     width: 2.3rem;
+     filter: drop-shadow(0 0 15px rgba(255, 147, 212, 0.3));
+     filter: -webkit-drop-shadow(0 0 15px rgba(255, 147, 212, 0.3));
+
+    }
     .som {
       display: flex;
       align-items: center;
       .toggle-som {
-        display: inline-block;
-       
+        display: inline-block;    
         background: rgba(29, 11, 80, 0.06);
         border-radius: 20px;
         -webkit-border-radius: 20px;
@@ -63,6 +68,7 @@
   &--principal {
     margin: auto 0;
     padding: 70px 0;
+    display: flex;
     h1 {
       font-weight: 300;
       font-size: 2.75rem;

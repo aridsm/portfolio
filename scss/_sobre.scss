@@ -6,6 +6,7 @@
   width: 170px;
   position: relative;
   display: grid;
+  flex:1;
   h3 {
     @include detalhes;
     text-align: left;
@@ -46,14 +47,23 @@
   @include bg-gradient(90deg);
   margin-left: 30px;
   border: 1px solid $azul-bg-1;
+  height: 17rem;
+  flex:3;
+  display: flex;
+  align-items: center;
+
 }
 
 .container-sobre-mim {
-  display: none;
-  padding: 40px 30px;
+  padding: 1rem;
   position: relative;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
   picture {
-    width: 200px;
+    width: 10rem;
     height: 220px;
     display: block;
     @include borderRadius;
@@ -83,11 +93,32 @@
 
 
 .container-linguagens {
+  display: block;
+  width: 100%;
+  max-height: 100%;
+  overflow: auto;
+  > div > ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    grid-gap: 2rem;
+    margin-bottom: 4rem;
+    li {
+      text-align: center;
+    }
+  }
+  > div > p  {
+    margin: 2rem;
+    color: $azul-texto-claro
+  }
  img {
-   width: 2rem
+   width: 1.5rem
  }
- .linguagens-ferramentas {
-   display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
+ .idiomas .nivel {
+  font-size: 0.725rem;
  }
+}
+
+.container-linguagens::-webkit-scrollbar-track {
+  background:transparent;
 }
