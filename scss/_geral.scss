@@ -35,6 +35,10 @@ i {
   position: relative;
   width: 100%;
   padding-left: 90px;
+  background-image:url('../Hinterrhein.svg');
+  background-size:50rem;
+  background-position: top right;
+  background-repeat: no-repeat;
 }
 
 .email {
@@ -43,7 +47,7 @@ i {
   text-align: center;
   color: $azul-texto-escuro;
   top: calc(50% - 100px);
-  right: 80px;
+  left: 10rem;
   writing-mode: vertical-lr;
   -webkit-writing-mode: vertical-lr;
   &::before {
