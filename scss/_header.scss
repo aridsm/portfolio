@@ -9,7 +9,7 @@
   background: rgba(16, 11, 80, 0.5);
   @include transition;
   overflow: hidden;
-  z-index: 99;
+  z-index: 99999999;
   ul {
     width: 90px;
     text-align: center;
