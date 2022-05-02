@@ -23,6 +23,7 @@
   }
   .pag {
     position: relative;
+    display: flex;
     button {
       width: 25px;
       height: 25px;
@@ -32,7 +33,7 @@
       line-height: 0.5;
       @include detalhes;
       @include transition;
-      & + button {
+       + button {
         margin-left: 3px;
       }
       &.selecionado {
@@ -123,18 +124,20 @@
     font-weight: 400;
   }
   ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(6rem, auto));
+    justify-content: end;
+    grid-gap: 1rem;
+    width: 100%;
+    margin-left: 1rem;
   }
   li {
     background: $azul-transparente;
     border: 1px solid $azul-borda;
-    padding: 5px 10px;
+    padding: 5px 15px;
     border-radius: $radius;
-    & + li {
-      margin-left: 15px;
-    }
+    text-align: center;
+    white-space: nowrap;
   }
 }
 

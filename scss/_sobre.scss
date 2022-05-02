@@ -18,18 +18,16 @@
   .btns-sobre {
     display: flex;
     flex-direction: column;
-
+    position: relative;
     button {
       @include borderRadius;
       background: $azul-transparente;
       border: 1px solid $azul-borda;
       padding: 10px 15px;
-      @include transition;
-
+      transition: 0.1s;
       &.selecionado {
-        outline: 1px solid $rosa-claro;
-        outline-offset: 2px;
         color: $azul-texto-claro;
+        box-shadow: 0 0 0 2px $azul-bg-1, 0 0 0 3px $rosa-claro;
       }
       &:hover {
         color: $azul-texto-claro;
@@ -51,7 +49,17 @@
   flex:3;
   display: flex;
   align-items: center;
-
+  position: relative;
+  &::before {
+    @include gradient-border(90deg, 100%, 1px);
+    top: -1px;
+    left: 0;
+  }
+  &::after {
+    @include gradient-border(90deg, 100%, 1px);
+    bottom: -1px;
+    left: 0;
+  }
 }
 
 .container-sobre-mim {
@@ -79,37 +87,32 @@
     max-width: 210px;
     margin-left: 30px;
   }
-  &::before {
-    @include gradient-border(90deg, 100%, 1px);
-    top: -1px;
-    left: 0;
-  }
-  &::after {
-    @include gradient-border(90deg, 100%, 1px);
-    bottom: -1px;
-    left: 0;
-  }
 }
 
-
+.container-certificados {
+  display: none;
+}
 .container-linguagens {
-  display: block;
+  display: none;
   width: 100%;
-  max-height: 100%;
+  height: 100%;
   overflow: auto;
+  flex-direction: column;
+  scrollbar-width: thin;
+  scrollbar-color: $rosa-claro transparent;
   > div > ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
     grid-gap: 2rem;
-    margin-bottom: 4rem;
+    margin: 0 1rem 4rem 1rem;
     li {
       text-align: center;
     }
   }
   > div > p  {
     margin: 2rem;
-    color: $azul-texto-claro
+    color: $azul-texto-claro;
   }
  img {
    width: 1.5rem
@@ -121,4 +124,8 @@
 
 .container-linguagens::-webkit-scrollbar-track {
   background:transparent;
+}
+
+.container-infos > div.ativo {
+  display: flex;
 }

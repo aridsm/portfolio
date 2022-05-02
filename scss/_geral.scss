@@ -11,14 +11,14 @@ body {
 body::before {
   content:'';
   position: absolute;
-  width: 800px;
+  width: 500px;
   height:500px;
-  filter: blur(200px);
-  -webkit-filter: (200px);
-  background-color: rgba(108, 208, 255, 0.3);
+  filter: blur(300px);
+  -webkit-filter: (300px);
+  background-color: rgba(108, 208, 255, 0.2);
   display: block;
-  top: -300px;
-  left: -200px;
+  top: -200px;
+  left: -100px;
 }
 
 h2,
@@ -36,8 +36,8 @@ i {
   width: 100%;
   padding-left: 90px;
   background-image:url('../Hinterrhein.svg');
-  background-size:50rem;
-  background-position: top right;
+  background-size: 60%;
+  background-position: 100% 0;
   background-repeat: no-repeat;
 }
 
@@ -115,7 +115,7 @@ i {
   color: #9d095d;
   &:hover {
     @include shadow(
-      0px 0px 40px rgba(252, 171, 220, 0.20),
+      0px 0px 40px rgba(252, 171, 220, 0.2),
       1px 1px 6px rgba(18, 4, 58, 0.3),
       inset -1px -1px 3px #9d2469,
       inset 1px 1px 3px #ffe1eb
@@ -171,6 +171,11 @@ footer {
 
 ::-webkit-scrollbar-thumb:hover {
   background: $rosa-escuro;
+}
+
+:root {
+  scrollbar-width: thin;
+  scrollbar-color: $rosa-claro $azul-bg-2;
 }
 
 ::selection {

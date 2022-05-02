@@ -10,10 +10,7 @@
         align-self: flex-end;
       }
       span {
-        background: -webkit-linear-gradient($rosa-claro, $rosa-escuro);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        display: block;
+        color: $rosa-claro;
       }
     }
   }
