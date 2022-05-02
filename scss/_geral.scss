@@ -13,12 +13,12 @@ body::before {
   position: absolute;
   width: 500px;
   height:500px;
-  filter: blur(300px);
-  -webkit-filter: (300px);
-  background-color: rgba(108, 208, 255, 0.2);
+  filter: blur(100px);
+  -webkit-filter: (100px);
+  background-color: rgba(108, 208, 255, 0.15);
   display: block;
-  top: -200px;
-  left: -100px;
+  top: -250px;
+  left: -50px;
 }
 
 h2,
