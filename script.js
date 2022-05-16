@@ -124,3 +124,27 @@ mostrarSecao(0)
 btnsSobre.forEach((btn, index) => {
     btn.addEventListener('click', () => mostrarSecao(index))
 })
+
+/* Animar ao scroll */
+
+const animaElement = document.querySelectorAll('.js-anima-scroll')
+
+
+function distanceToTop(item) {
+    const DISTANCE_ELEMENT_TOP = item.getBoundingClientRect().top
+    const WINDOW_HEIGHT = window.innerHeight
+
+    return DISTANCE_ELEMENT_TOP * 100 / WINDOW_HEIGHT
+}
+
+function animaScroll() {
+    animaElement.forEach(item => {
+        if (distanceToTop(item) > 60) {
+            item.classList.add('animaDown')
+        } else if (distanceToTop(item) < 0) {
+            item.classList.remove('animaDown')
+        }
+    })
+}
+
+window.addEventListener('scroll', animaScroll)
