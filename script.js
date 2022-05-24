@@ -127,24 +127,39 @@ btnsSobre.forEach((btn, index) => {
 
 /* Animar ao scroll */
 
-const animaElement = document.querySelectorAll('.js-anima-scroll')
+const animaDown = document.querySelectorAll('.animaDown'),
+animaLeft = document.querySelectorAll('.animaLeft'),
+animaRight = document.querySelectorAll('.animaRight'),
+animaBothSide = document.querySelectorAll('.animaBothSide')
+animaTop = document.querySelectorAll('.animaTop')
 
+const animationElements = []
+animationElements.push(animaLeft, animaRight, animaBothSide, animaDown, animaTop)
+console.log(animationElements)
 
-function distanceToTop(item) {
+function percentToTop(item) {
     const DISTANCE_ELEMENT_TOP = item.getBoundingClientRect().top
     const WINDOW_HEIGHT = window.innerHeight
-
     return DISTANCE_ELEMENT_TOP * 100 / WINDOW_HEIGHT
 }
 
 function animaScroll() {
-    animaElement.forEach(item => {
-        if (distanceToTop(item) > 60) {
-            item.classList.add('animaDown')
-        } else if (distanceToTop(item) < 0) {
-            item.classList.remove('animaDown')
-        }
-    })
+    animationElements.map(element => 
+        element.forEach(item => {
+            const PERCENT_TO_TOP = item.dataset.percent || 60
+            if (percentToTop(item) > PERCENT_TO_TOP) {
+                const DELAY = item.dataset.delay || 0
+                setTimeout(() => {
+                    item.classList.add('animated')
+                }, DELAY);
+            }
+            console.log(percentToTop(item))
+        })  
+    )
 }
-
+animaScroll()
 window.addEventListener('scroll', animaScroll)
+
+//Scroll pagina inteira
+
+//Ao dar scroll, ira abrir a proxima seçao

@@ -18,31 +18,31 @@
     <header class="header">
         <nav>
             <ul>
-                <li>
+                <li class="animaLeft" data-delay="1000" data-percent="0">
                     <a href="#home" class="selecionado">
                         <i class="bi bi-house"></i>
                         <p>Home</p>
                     </a>
                 </li>
-                <li>
+                <li class="animaLeft" data-delay="1200" data-percent="0">
                     <a href="#sobre">
                         <i class="bi bi-person-circle"></i>
                         <p>Sobre</p>
                     </a>
                 </li>
-                <li>
+                <li class="animaLeft" data-delay="1400" data-percent="0">
                     <a href="#projetos">
                         <i class="bi bi-archive"></i>
                         <p>Projetos</p>
                     </a>
                 </li>
-                <li>
+                <li class="animaLeft" data-delay="1600" data-percent="0">
                     <a href="#valor">
                         <i class="bi bi-coin"></i>
                         <p>Preços</p>
                     </a>
                 </li>
-                <li>
+                <li class="animaLeft" data-delay="1800" data-percent="0">
                     <a href="#contato">
                         <i class="bi bi-envelope"></i>
                         <p>Contato</p>
@@ -56,15 +56,16 @@
             <div class="home--header">
                 <p>Olá, bem vindo(a)!<br>Eu sou a<span> Ariane</span></p>
 
-                <div class="logo"><img src="./img/logo.svg" alt="">
+                <div class="logo animaBothSide" data-percent="0" data-delay="1500">
+                    <img src="./img/logo.svg" alt="">
                     <p>arimo</p>
                 </div>
 
             </div>
             <div class="home--principal">
                 <div>
-                    <h1>Design & <br>Desenvolvimento web</h1>
-                    <p class="front-end">front-end</p>
+                    <h1 class="animaRight" data-delay="1000" data-percent="0">Design & <br>Desenvolvimento web</h1>
+                    <p class="front-end animaDown" data-percent="0">front-end</p>
 
                     <p class="texto">Uma frase genérica falando sobre alguma <br> coisa para deixar bonitinho.</p>
 
@@ -73,15 +74,15 @@
 
                     <nav class="redes-sociais">
                         <ul>
-                            <li class="tooltip">
+                            <li class="tooltip animaTop" data-delay="0" data-percent="0">
                                 <a href="" class="tooltip_ativador"><i class="bi bi-github"></i></a>
                                 <p class="tooltip_msg">Github</p>
                             </li>
-                            <li class="tooltip">
+                            <li class="tooltip animaTop" data-delay="200" data-percent="0">
                                 <a href="" class="tooltip_ativador"><i class="bi bi-instagram"></i></a>
                                 <p class="tooltip_msg">Instagram</p>
                             </li>
-                            <li class="tooltip">
+                            <li class="tooltip animaTop" data-delay="400" data-percent="0">
                                 <a href="" class="tooltip_ativador"><i class="bi bi-envelope"></i></a>
                                 <p class="tooltip_msg">Email</p>
                             </li>
@@ -91,19 +92,19 @@
             </div>
         </section>
         <span class="email">arianemorelato@gmail.com</span>
-        <section class="caracteristicas js-anima-scroll" id="caracteristicas">
+        <section class="caracteristicas" id="caracteristicas">
             <div class="container-sections">
                 <ul>
                     <li>
-                        <span><i class="bi bi-eye"></i></span>
+                        <span class="animaBothSide" data-delay="1000"><i class="bi bi-eye"></i></span>
                         <p>Sites responsivos e acessíveis</p>
                     </li>
                     <li>
-                        <span><i class="bi bi-eye"></i></span>
+                        <span class="animaBothSide" data-delay="1200"><i class="bi bi-eye"></i></span>
                         <p>Sites responsivos e acessíveis</p>
                     </li>
                     <li>
-                        <span><i class="bi bi-eye"></i></span>
+                        <span class="animaBothSide" data-delay="1400"><i class="bi bi-eye"></i></span>
                         <p>Sites responsivos e acessíveis</p>
                     </li>
                 </ul>
@@ -174,6 +175,10 @@
                                 <li>
                                     <img src="./img/nodejs.svg" alt="node js">
                                     <p>Node.js</p>
+                                </li>
+                                <li>
+                                    <img src="./img/redux.svg" alt="redux">
+                                    <p>Redux</p>
                                 </li>
                             </ul>
                         </div>

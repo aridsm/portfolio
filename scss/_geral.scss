@@ -196,12 +196,46 @@ footer {
 }
 
 .animaDown {
-  animation: animaDown 2s forwards;
-  transform: translateY(40px);
+  transition: 1s;
+  transform: translateY(-30px);
 }
 
-@keyframes animaDown {
-  to {
-    transform: translateY(0px);
-  }
+.animaDown.animated {
+  transform: translateY(0);
+}
+
+.animaTop {
+  transition: 1s;
+  transform: translateY(2rem);
+}
+
+.animaTop.animated {
+  transform: translateY(0);
+}
+
+.animaRight {
+  transition: 1s;
+  transform: translateX(-3rem);
+}
+
+.animaRight.animated {
+  transform: translateX(0);
+}
+
+.animaLeft {
+  transition: 1s;
+  transform: translateX(4rem);
+}
+
+.animaLeft.animated {
+  transform: translateX(0);
+}
+
+.animaBothSide {
+  transition: 1.5s;
+  width: 0 !important;
+  overflow: hidden;
+}
+.animaBothSide.animated {
+  width: 100% !important;
 }
