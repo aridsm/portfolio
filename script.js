@@ -146,14 +146,15 @@ function percentToTop(item) {
 function animaScroll() {
     animationElements.map(element => 
         element.forEach(item => {
-            const PERCENT_TO_TOP = item.dataset.percent || 60
-            if (percentToTop(item) > PERCENT_TO_TOP) {
+            const PERCENT_TO_TOP = item.dataset.percent || 70
+            
+            console.log(percentToTop(item) < PERCENT_TO_TOP)
+            if (percentToTop(item) < PERCENT_TO_TOP) {
                 const DELAY = item.dataset.delay || 0
                 setTimeout(() => {
                     item.classList.add('animated')
                 }, DELAY);
             }
-            console.log(percentToTop(item))
         })  
     )
 }
