@@ -9,10 +9,10 @@ body {
 
 
 body::before {
-  content:'';
+  content: '';
   position: absolute;
   width: 500px;
-  height:500px;
+  height: 500px;
   filter: blur(100px);
   -webkit-filter: (100px);
   background-color: rgba(108, 208, 255, 0.15);
@@ -35,7 +35,7 @@ i {
   position: relative;
   width: 100%;
   padding-left: 90px;
-  background-image:url('../Hinterrhein.svg');
+  background-image: url('../Hinterrhein.svg');
   background-size: 60%;
   background-position: 100% 0;
   background-repeat: no-repeat;
@@ -51,6 +51,7 @@ i {
   display: none;
   writing-mode: vertical-lr;
   -webkit-writing-mode: vertical-lr;
+
   &::before {
     content: "";
     position: relative;
@@ -62,6 +63,7 @@ i {
     background-color: $rosa-claro;
     @include shadow(0px 0px 20px 1px rgba(252, 171, 220, 1));
   }
+
   &::after {
     content: "";
     position: relative;
@@ -77,6 +79,7 @@ i {
 
 .tooltip {
   position: relative;
+
   &_msg {
     background: $azul-bg-2;
     color: $azul-texto-claro;
@@ -87,11 +90,12 @@ i {
     top: calc(100% + 5px);
     display: none;
     z-index: 9;
+
     &::before {
       content: '';
       display: block;
       position: absolute;
-      width:0px;
+      width: 0px;
       border: 7px solid $azul-bg-2;
       transform: rotate(45deg);
       top: -2.5px;
@@ -102,9 +106,11 @@ i {
   &_ativador {
     color: $azul-texto-escuro;
     @include transition;
-    &:hover ~ .tooltip_msg {
+
+    &:hover~.tooltip_msg {
       display: block;
     }
+
     &:hover {
       color: $azul-texto-claro;
     }
@@ -114,25 +120,23 @@ i {
 .btn-rosa {
   @include borderRadius;
   @include gradient((180deg, $rosa-claro 0%, $rosa-escuro 100%));
-  @include shadow(
-    0px 0px 20px rgba(252, 171, 220, 0.15),
+  @include shadow(0px 0px 20px rgba(252, 171, 220, 0.15),
     1px 1px 6px rgba(18, 4, 58, 0.3),
     inset -1px -1px 3px #9d2469,
-    inset 1px 1px 3px #ffe1eb
-  );
+    inset 1px 1px 3px #ffe1eb);
   padding: 10px 25px;
   font-weight: 400;
   color: #9d095d;
   transition: .1s;
-  &:hover {  
-    @include shadow(
-    0px 0px 20px rgba(252, 171, 220, 0.2),
-    1px 1px 6px rgba(18, 4, 58, 0.3),
-    inset -1px -1px 3px #9d2469,
-    inset 1px 1px 3px #ffe1eb
-  );
-    transform: scale(1.07);
+
+  &:hover {
+    @include shadow(0px 0px 20px rgba(252, 171, 220, 0.3),
+      1px 1px 6px rgba(18, 4, 58, 0.3),
+      inset -1px -1px 3px #9d2469,
+      inset 1px 1px 3px #ffe1eb);
+
   }
+
   &:active {
     filter: brightness(95%);
     -webkit-filter: brightness(95%);
@@ -144,9 +148,11 @@ i {
   width: 100%;
   margin: 0 auto;
   padding: 100px 0;
+
   h2 {
     text-align: center;
   }
+
   .descricao {
     text-align: center;
     max-width: 250px;
@@ -158,9 +164,11 @@ i {
 footer {
   padding: 100px 0 40px 0;
   text-align: center;
+
   img {
     width: 2.5rem
   }
+
   .arimo {
     color: $rosa-claro;
     margin-bottom: 1rem;
@@ -193,55 +201,4 @@ footer {
 ::selection {
   background: rgba(255, 148, 212, 0.7);
   color: $azul-bg-2;
-}
-
-.animaDown {
-  transition: 1s;
-  transform: translateY(-2rem);
-}
-
-.animaDown.animated {
-  transform: translateY(0);
-}
-
-.animaTop {
-  transition: 1s;
-  transform: translateY(2rem);
-}
-
-.animaTop.animated {
-  transform: translateY(0);
-}
-
-.animaRight {
-  transition: 3s;
-  opacity: 0;
-  transform: translateX(-4rem);
-}
-
-.animaRight.animated {
-  transform: translateX(0);
-  opacity: 1;
-
-}
-
-.animaLeft {
-  transition: 2s;
-  transform: translateX(4rem);
-  opacity: 0;
-}
-
-.animaLeft.animated {
-  transform: translateX(0);
-  opacity: 1;
-
-}
-
-.animaBothSide {
-  transition: all 2s;
-  width: 0 !important;
-  overflow: hidden;
-}
-.animaBothSide.animated {
-  width: 100% !important;
 }

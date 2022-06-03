@@ -61,7 +61,7 @@ const
     btnsPagProjetos = document.querySelectorAll('.pag-btn'),
     btnProjetoProximo = document.querySelector('.btns-nav .posterior'),
     btnProjetoAnterior = document.querySelector('.btns-nav .anterior')
-    let indexProjeto = 0
+let indexProjeto = 0
 
 function choseProjectToShow(index) {
     showProject(index);
@@ -69,22 +69,31 @@ function choseProjectToShow(index) {
         btn.classList.remove('selecionado')
     })
     btnsPagProjetos[index].classList.add('selecionado');
-    selecaoBtnsProjetos.style.left=( 28 * index) - 2 + 'px';
+    selecaoBtnsProjetos.style.left = (28 * index) - 2 + 'px';
     indexProjeto = index
 }
 
-function showProject(index) {
-    tituloProjeto.innerText = projetos[index].titulo;
-    descricaoProjeto.innerText = projetos[index].descricao;
-    imgProjeto.setAttribute('src', `./img/${projetos[index].img}`);
-    linkWebsite.setAttribute('href', projetos[index].website);
-    linkRepositorio.setAttribute('href', projetos[index].repositorio);
-    linguagensProjeto.innerHTML = '';
+function createAttribute(attr, index, element, param, directory = '') {
+    element.setAttribute(attr, `${directory}${projetos[index][param]}`)
+}
+
+function createListOfLanguages(index) {
     projetos[index].linguagens.map(linguagem => {
         const novaLinguagem = document.createElement('li');
         novaLinguagem.innerText = linguagem;
         linguagensProjeto.appendChild(novaLinguagem);
     })
+}
+
+function showProject(index) {
+
+    tituloProjeto.innerText = projetos[index].titulo;
+    descricaoProjeto.innerText = projetos[index].descricao;
+    createAttribute('src', index, imgProjeto, 'img', './img/')
+    createAttribute('href', index, linkWebsite, 'website')
+    createAttribute('href', index, linkRepositorio, 'repositorio')
+    linguagensProjeto.innerHTML = '';
+    createListOfLanguages(index)
 }
 
 showProject(indexProjeto)
@@ -128,14 +137,21 @@ btnsSobre.forEach((btn, index) => {
 /* Animar ao scroll */
 
 const animaDown = document.querySelectorAll('.animaDown'),
-animaLeft = document.querySelectorAll('.animaLeft'),
-animaRight = document.querySelectorAll('.animaRight'),
-animaBothSide = document.querySelectorAll('.animaBothSide')
-animaTop = document.querySelectorAll('.animaTop')
+    animaLeft = document.querySelectorAll('.animaLeft'),
+    animaRight = document.querySelectorAll('.animaRight'),
+    animaBothSide = document.querySelectorAll('.animaBothSide'),
+    animaTop = document.querySelectorAll('.animaTop'),
+    animaScale = document.querySelectorAll('.animaScale')
 
 const animationElements = []
-animationElements.push(animaLeft, animaRight, animaBothSide, animaDown, animaTop)
-console.log(animationElements)
+animationElements.push(
+    animaLeft,
+    animaRight,
+    animaBothSide,
+    animaDown,
+    animaTop,
+    animaScale
+)
 
 function percentToTop(item) {
     const DISTANCE_ELEMENT_TOP = item.getBoundingClientRect().top
@@ -144,23 +160,38 @@ function percentToTop(item) {
 }
 
 function animaScroll() {
-    animationElements.map(element => 
+    animationElements.map(element =>
         element.forEach(item => {
-            const PERCENT_TO_TOP = item.dataset.percent || 70
-            
-            console.log(percentToTop(item) < PERCENT_TO_TOP)
+            const PERCENT_TO_TOP = item.dataset.percent || 90
+
             if (percentToTop(item) < PERCENT_TO_TOP) {
                 const DELAY = item.dataset.delay || 0
                 setTimeout(() => {
                     item.classList.add('animated')
                 }, DELAY);
             }
-        })  
+        })
     )
 }
 animaScroll()
 window.addEventListener('scroll', animaScroll)
 
-//Scroll pagina inteira
+//Texto efeito
 
-//Ao dar scroll, ira abrir a proxima seçao
+const elementText = document.querySelectorAll('.animaText')
+
+function animaText() {
+    elementText.forEach(element => {
+
+        const text = Array.from(element.dataset.text)
+        for (let index = 0; index < text.length; index++) {
+            setTimeout(() => {
+                const newLetter = document.createElement('span')
+                newLetter.textContent = text[index]
+                element.appendChild(newLetter)
+            }, index * 100);
+        }
+    })
+
+}
+animaText()

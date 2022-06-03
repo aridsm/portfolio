@@ -1,0 +1,80 @@
+.animaDown {
+  transition: 1s;
+  transform: translateY(-2rem);
+}
+
+.animaDown.animated {
+  transform: translateY(0);
+}
+
+.animaTop {
+  transition: 1s;
+  transform: translateY(2rem);
+}
+
+.animaTop.animated {
+  transform: translateY(0);
+}
+
+.animaRight {
+  transition: 1s;
+  opacity: 0;
+  transform: translateX(-4rem);
+}
+
+.animaRight.animated {
+  transform: translateX(0);
+  opacity: 1;
+
+}
+
+.animaLeft {
+  transition: 1s;
+  transform: translateX(4rem);
+  opacity: 0;
+}
+
+.animaLeft.animated {
+  transform: translateX(0);
+  opacity: 1;
+
+}
+
+.animaScale {
+  transition: 1s;
+  transform: scale(1.25);
+  opacity: 0;
+}
+
+.animaScale.animated {
+  transform: scale(1);
+  opacity: 1;
+
+}
+
+.animaBothSide {
+  transition: all 1.5s;
+  width: 0 !important;
+  overflow: hidden;
+}
+
+.animaBothSide.animated {
+  width: 100% !important;
+}
+
+.animaText span {
+  animation: animaText 1s forwards;
+  display: inline-block;
+}
+
+@keyframes animaText {
+  from {
+    opacity: 0;
+    transform: translateY(-2rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
