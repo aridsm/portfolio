@@ -16,12 +16,12 @@ const projetos = [
         linguagens: ['React Js', 'CSS', 'JavaScript', 'HTML']
     },
     {
-        titulo: 'Pomodoro App',
-        img: 'pomodoro.png',
-        website: 'https://aridsm.github.io/pomodoro-app',
-        repositorio: 'https://github.com/aridsm/pomodoro-app',
-        descricao: 'Projeto de um cronômetro aplicado a técnica pomodoro.',
-        linguagens: ['HTML', 'CSS', 'JavaScript']
+        titulo: 'Yoga & +',
+        img: 'yoga.gif',
+        website: 'https://aridsm.github.io/yoga',
+        repositorio: 'https://github.com/aridsm/yoga',
+        descricao: 'Projeto de uma landing page de uma academia de yoga e mais.',
+        linguagens: ['HTML', 'CSS', 'React js', 'JavaScript']
     },
     {
         titulo: 'Cafeteria',
