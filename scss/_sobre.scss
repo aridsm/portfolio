@@ -55,6 +55,7 @@
   align-items: center;
   position: relative;
 
+
   &::before {
     @include gradient-border(90deg, 100%, 1px);
     top: -1px;
@@ -100,6 +101,35 @@
 
 .container-certificados {
   display: none;
+  padding: 2rem;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+
+  scrollbar-width: thin;
+  scrollbar-color: $rosa-claro transparent;
+
+  ul li {
+    margin-top: 1rem;
+  }
+
+  button {
+    color: $rosa-claro;
+    position: relative;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 7px;
+      left: -10px;
+      width: 2px;
+      height: 2px;
+      border-radius: 50%;
+      background: $rosa-claro;
+    }
+  }
 }
 
 .container-linguagens {

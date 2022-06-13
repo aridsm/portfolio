@@ -2,14 +2,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   .btns-nav button {
     @include transition;
+
     &:hover {
       color: $azul-texto-claro;
     }
   }
+
   .posterior {
     margin-left: 10px;
+
     &::before {
       content: "";
       position: relative;
@@ -21,9 +25,11 @@
       background-color: $rosa-claro;
     }
   }
+
   .pag {
     position: relative;
     display: flex;
+
     button {
       width: 25px;
       height: 25px;
@@ -33,16 +39,20 @@
       line-height: 0.5;
       @include detalhes;
       @include transition;
-       + button {
+
+      +button {
         margin-left: 3px;
       }
+
       &.selecionado {
         color: $azul-texto-claro;
       }
+
       &:hover {
         color: $azul-texto-claro;
       }
     }
+
     .selecao-btn {
       position: absolute;
       display: block;
@@ -60,37 +70,82 @@
 
 .projeto {
   margin-bottom: 80px;
+
   &_header {
     margin: 20px 0;
     display: flex;
     align-items: center;
     position: relative;
-    span + span {
+
+    span+span {
       margin-left: 15px;
     }
+
     h3 {
       margin-left: auto;
       font-size: 2.25rem;
       font-weight: 300;
     }
+
     &::before {
-     @include gradient-border(90deg, 100%, 1px);
+      @include gradient-border(90deg, 100%, 1px);
       bottom: -20px;
     }
   }
+
   &_infos {
     padding: 40px 0;
     display: flex;
     flex-direction: column;
+
     p {
       margin-top: 1rem;
     }
+
     picture {
       display: block;
       flex: 2;
       height: 12rem;
       order: -1;
       position: relative;
+
+      a {
+        position: relative;
+        z-index: 3;
+
+        &:hover .visite {
+          opacity: 1;
+        }
+      }
+
+      .visite {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #03023fd2;
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        opacity: 0;
+        transition: .2s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        p {
+          font-weight: 900;
+          font-size: 1.2rem;
+          color: $azul-texto-claro
+        }
+
+        i {
+          margin-top: 1rem;
+          color: $rosa-claro;
+        }
+      }
+
       img {
         width: 100%;
         height: 100%;
@@ -98,8 +153,9 @@
         object-position: right;
         display: block;
       }
+
       &:before {
-        content:'Acesse o site';
+        content: 'Acesse o site';
         color: $azul-texto-claro;
         opacity: 0;
         display: flex;
@@ -119,10 +175,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   p {
     color: $azul-texto-claro;
     font-weight: 400;
   }
+
   ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(6rem, auto));
@@ -131,6 +189,7 @@
     width: 100%;
     margin-left: 1rem;
   }
+
   li {
     background: $azul-transparente;
     border: 1px solid $azul-borda;
@@ -143,6 +202,7 @@
 
 .link-github {
   text-align: center;
+
   .ver-todos-projetos {
     margin-bottom: 10px;
   }

@@ -1,5 +1,4 @@
 .animaDown {
-  transition: 1s;
   transform: translateY(-2rem);
 }
 
@@ -8,7 +7,6 @@
 }
 
 .animaTop {
-  transition: 1s;
   transform: translateY(2rem);
 }
 
@@ -17,9 +15,8 @@
 }
 
 .animaRight {
-  transition: 1s;
   opacity: 0;
-  transform: translateX(-4rem);
+  transform: translateX(-4rem) skew(25deg);
 }
 
 .animaRight.animated {
@@ -29,8 +26,7 @@
 }
 
 .animaLeft {
-  transition: 1s;
-  transform: translateX(4rem);
+  transform: translateX(4rem) skew(-25deg);
   opacity: 0;
 }
 
@@ -41,19 +37,17 @@
 }
 
 .animaScale {
-  transition: 1s;
-  transform: scale(1.25);
+  transform: scale(0.8) rotateX(50deg);
   opacity: 0;
 }
 
 .animaScale.animated {
   transform: scale(1);
   opacity: 1;
-
 }
 
 .animaBothSide {
-  transition: all 1.5s;
+  transition: all 20s;
   width: 0 !important;
   overflow: hidden;
 }
@@ -65,6 +59,10 @@
 .animaText span {
   animation: animaText 1s forwards;
   display: inline-block;
+}
+
+.anima {
+  transition: 1s;
 }
 
 @keyframes animaText {
