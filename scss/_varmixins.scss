@@ -1,5 +1,5 @@
-$azul-bg-1: #1f217c;
-$azul-bg-2: #03023f;
+$azul-bg-1: #1f287c;
+$azul-bg-2: #020b3f;
 $azul-texto-claro: #c8bbff;
 $azul-texto-escuro: #8575ce;
 $azul-transparente: #7b6bc51a;
@@ -34,21 +34,17 @@ $radius: 6px;
   position: absolute;
   height: $height;
   width: $width;
-  @include gradient((
-    $deg,
-    rgba(255, 255, 255, 0) 10%,
-    $azul-texto-escuro 40%,
-    rgba(255, 255, 255, 0) 90%
-  ))
+  @include gradient(($deg,
+      rgba(255, 255, 255, 0) 10%,
+      $azul-texto-escuro 40%,
+      rgba(255, 255, 255, 0) 90%))
 }
 
 @mixin bg-gradient($deg) {
-  @include gradient((
-    $deg,
-    rgba(0, 0, 0, 0) -10%,
-    $azul-transparente 50%,
-    rgba(0, 0, 0, 0) 110%
-  ));
+  @include gradient(($deg,
+      rgba(0, 0, 0, 0) -10%,
+      $azul-transparente 50%,
+      rgba(0, 0, 0, 0) 110%));
 }
 
 @mixin transition {
