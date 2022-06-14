@@ -1,6 +1,4 @@
 import projetos from './projetos.js';
-import certificados from './certificados.js'
-console.log(certificados)
 /* Projetos */
 const
     tituloProjeto = document.querySelector('.projeto h3'),
@@ -47,7 +45,6 @@ function showProject(index) {
     linguagensProjeto.innerHTML = '';
     createListOfLanguages(index);
     imgProjeto.parentElement.href = projetos[index].website
-    console.log(imgProjeto.parentElement.href)
 }
 
 showProject(indexProjeto)
@@ -117,23 +114,3 @@ function animaScroll() {
 }
 animaScroll()
 window.addEventListener('scroll', animaScroll)
-
-//Texto efeito
-
-const elementText = document.querySelectorAll('.animaText')
-
-function animaText() {
-    elementText.forEach(element => {
-
-        const text = Array.from(element.dataset.text)
-        for (let index = 0; index < text.length; index++) {
-            setTimeout(() => {
-                const newLetter = document.createElement('span')
-                newLetter.textContent = text[index]
-                element.appendChild(newLetter)
-            }, index * 100);
-        }
-    })
-
-}
-animaText()

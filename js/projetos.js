@@ -42,8 +42,8 @@ const projetos = [
   {
     titulo: 'Canil',
     img: 'canil.gif',
-    website: 'https://aridsm.github.io/https://aridsm.github.io/canil/',
-    repositorio: 'https://github.com/aridsm/https://aridsm.github.io/canil/',
+    website: 'https://aridsm.github.io/canil/',
+    repositorio: 'https://aridsm.github.io/canil/',
     descricao: 'Projeto de um canil fictício.',
     linguagens: ['HTML', 'Sass', 'JavaScript']
   },

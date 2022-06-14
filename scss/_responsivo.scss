@@ -2,7 +2,7 @@
   .container-page {
     padding: 0 20px;
     background-position: 100% 5rem;
-    background-size:40rem;
+    background-size: 40rem;
   }
 
   @supports (backdrop-filter: blur()) {
@@ -24,15 +24,18 @@
     justify-content: center;
     position: fixed;
     font-size: 0.875rem;
+
     ul {
       display: flex;
       width: 100%;
     }
+
     a {
       padding: 10px 15px;
       grid-template-columns: auto;
       gap: 5px;
     }
+
     &:hover {
       width: 100%;
     }
@@ -46,28 +49,36 @@
     padding-top: 120px;
     text-align: center;
     align-items: center;
+
     .home--header {
       text-align: left;
     }
+
     .home--principal {
       padding-top: 8rem;
     }
+
     h1 {
       font-size: 36px;
     }
+
     .texto {
       margin: 10px 0 80px 0;
     }
   }
+
   .redes-sociais ul {
     justify-content: center;
   }
+
   .caracteristicas ul {
     flex-direction: column;
     align-items: center;
-    li + li {
+
+    li+li {
       margin-top: 60px;
     }
+
     li:nth-of-type(2) {
       align-self: center;
     }
@@ -77,7 +88,7 @@
 @media all and (max-width: 700px) {
   .container-page {
     background-position: 100% 5rem;
-    background-size:25rem;
+    background-size: 25rem;
   }
 
   body::before {
@@ -85,19 +96,23 @@
     top: -300px;
     left: -250px;
   }
-  
+
   .container-sobre {
     flex-direction: column;
+
     .titulo_e_btns {
       width: 100%;
     }
+
     .btns-sobre {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 1rem;
-      button + button {
+
+      button+button {
         margin-top: 0;
       }
+
       button:nth-of-type(2) {
         grid-row: 2;
         grid-column: 1 / -1;
@@ -112,7 +127,7 @@
     padding: 1rem;
   }
 
-  .container-linguagens > div > p  {
+  .container-linguagens>div>p {
     text-align: center;
   }
 
@@ -130,14 +145,17 @@
   .container-sobre-mim {
     flex-direction: column;
     align-items: center;
+
     p {
       max-width: 100%;
       margin-left: 0;
       margin-top: 30px;
     }
+
     picture {
       width: 180px;
       height: 230px;
+      margin-bottom: 2rem;
     }
   }
 
@@ -145,12 +163,15 @@
     h3 {
       font-size: 1.5rem;
     }
+
     .linguagens {
       flex-direction: column;
       align-items: flex-start;
+
       p {
         margin-bottom: 15px;
       }
+
       ul {
         width: 100%;
         margin-left: 0;
@@ -161,22 +182,27 @@
 
   .projetos_btns {
     flex-direction: column;
+
     .btns-nav {
       width: 100%;
       display: flex;
       justify-content: space-between;
       order: 2;
       margin-top: 30px;
+
       button {
         flex: 1;
       }
     }
+
     .anterior {
       text-align: left;
     }
+
     .posterior {
       text-align: right;
       position: relative;
+
       &::before {
         content: "";
         position: absolute;
@@ -189,14 +215,18 @@
   .precos-container {
     grid-template-columns: auto;
   }
+
   .valor .precos {
     text-align: center;
   }
+
   .valor .a-depender {
     text-align: center;
+
     li {
       justify-content: center;
     }
+
     &::before {
       @include gradient-border(90deg, 100%, 1px);
       top: -40px;
