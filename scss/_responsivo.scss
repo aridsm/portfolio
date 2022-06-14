@@ -19,7 +19,7 @@
   }
 
   .header {
-    width: 100%;
+    width: 100vw;
     height: 5rem;
     justify-content: center;
     position: fixed;
@@ -39,6 +39,10 @@
 
     &:hover {
       width: 100%;
+    }
+
+    &::after {
+      display: none;
     }
   }
 
@@ -242,6 +246,10 @@
 }
 
 @media all and(max-width: 380px) {
+  body {
+    overflow-x: hidden;
+  }
+
   .header a {
     padding: 10px !important;
     font-size: 0.8rem;
