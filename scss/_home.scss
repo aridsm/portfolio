@@ -51,15 +51,6 @@
       font-weight: 300;
       font-size: 2.75rem;
       color: $azul-texto-claro;
-
-      &::before {
-        content: '';
-        width: 3rem;
-        height: 2px;
-        display: block;
-        background: $azul-texto-escuro;
-        margin-bottom: .2rem;
-      }
     }
 
     .front-end {
