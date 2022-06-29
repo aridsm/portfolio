@@ -35,10 +35,10 @@ i {
   position: relative;
   width: 100%;
   padding-left: 90px;
-  background-image: url('../Whangaehu.svg');
+  background-image: url('../Hinterrhein.svg');
   background-position: 110% 0;
   background-repeat: no-repeat;
-  background-size: 55%;
+  background-size: 65%;
 }
 
 .email {
@@ -122,17 +122,17 @@ i {
   @include gradient((180deg, $rosa-claro 0%, $rosa-escuro 100%));
   @include shadow(0px 0px 20px rgba(252, 171, 220, 0.15),
     1px 1px 6px rgba(18, 4, 58, 0.3),
-    inset -1px -1px 3px #9d2469,
+    inset -1px -1px 3px #b32073,
     inset 1px 1px 3px #ffe1eb);
   padding: 10px 25px;
   font-weight: 400;
-  color: #9d095d;
+  color: #97145e;
   transition: .1s;
 
   &:hover {
     @include shadow(0px 0px 20px rgba(252, 171, 220, 0.3),
       1px 1px 6px rgba(18, 4, 58, 0.3),
-      inset -1px -1px 3px #9d2469,
+      inset -1px -1px 3px #b32073,
       inset 1px 1px 3px #ffe1eb);
 
   }

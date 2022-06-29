@@ -9,6 +9,7 @@
   align-items: start;
   justify-content: center;
   position: relative;
+
   &--header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -16,11 +17,13 @@
     @include detalhes;
     width: 100%;
     color: $azul-texto-escuro;
+
     p:first-of-type {
       span {
         color: $azul-texto-claro;
       }
     }
+
     .logo {
       margin: 0 auto;
       color: $rosa-claro;
@@ -29,22 +32,34 @@
       align-items: center;
       flex-direction: column;
     }
+
     .logo img {
-     width: 2.3rem;
-     filter: drop-shadow(0 0 15px rgba(255, 147, 212, 0.3));
-     filter: -webkit-drop-shadow(0 0 15px rgba(255, 147, 212, 0.3));
+      width: 2.3rem;
+      filter: drop-shadow(0 0 15px rgba(255, 147, 212, 0.3));
+      filter: -webkit-drop-shadow(0 0 15px rgba(255, 147, 212, 0.3));
 
     }
   }
+
   &--principal {
     margin: auto 0;
     padding: 70px 0;
     display: flex;
     padding-top: 12rem;
+
     h1 {
       font-weight: 300;
       font-size: 2.75rem;
       color: $azul-texto-claro;
+
+      &::before {
+        content: '';
+        width: 3rem;
+        height: 2px;
+        display: block;
+        background: $azul-texto-escuro;
+        margin-bottom: .2rem;
+      }
     }
 
     .front-end {
@@ -62,6 +77,7 @@
       padding: 12px 20px;
       color: $azul-texto-escuro;
       @include transition;
+
       &:hover {
         color: $azul-texto-claro;
       }
@@ -69,9 +85,11 @@
 
     .redes-sociais {
       margin-top: 40px;
+
       ul {
         display: flex;
-        li + li {
+
+        li+li {
           margin-left: 20px;
         }
       }
