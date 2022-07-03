@@ -1,5 +1,5 @@
 body {
-  @include gradient((100deg, $azul-bg-1 0%, $azul-bg-2 100%));
+  @include gradient((90deg, $azul-bg-1 0%, $azul-bg-2 100%));
   color: $azul-texto-escuro;
   font-family: "Red Hat Display", sans-serif;
   font-weight: 400;
@@ -13,9 +13,9 @@ body::before {
   position: absolute;
   width: 500px;
   height: 500px;
-  filter: blur(100px);
-  -webkit-filter: (100px);
-  background-color: rgba(108, 208, 255, 0.15);
+  filter: blur(150px);
+  -webkit-filter: (150px);
+  background-color: rgba(108, 208, 255, 0.27);
   display: block;
   top: -250px;
   left: -50px;
@@ -135,32 +135,6 @@ i {
     background: rgba(124, 107, 197, 0.164)
   }
 }
-
-/*
-.btn-rosa {
-  @include borderRadius;
-  @include gradient((180deg, $rosa-claro 0%, $rosa-escuro 100%));
-  @include shadow(0px 0px 20px rgba(252, 171, 220, 0.15),
-    1px 1px 6px rgba(18, 4, 58, 0.3),
-    inset -1px -1px 3px #b32073,
-    inset 1px 1px 3px #ffe1eb);
-  padding: 10px 25px;
-  font-weight: 400;
-  color: #97145e;
-  transition: .1s;
-
-  &:hover {
-    @include shadow(0px 0px 20px rgba(252, 171, 220, 0.3),
-      1px 1px 6px rgba(18, 4, 58, 0.3),
-      inset -1px -1px 3px #b32073,
-      inset 1px 1px 3px #ffe1eb);
-  }
-
-  &:active {
-    filter: brightness(95%);
-    -webkit-filter: brightness(95%);
-  }
-}*/
 
 .container-sections {
   max-width: 660px;
